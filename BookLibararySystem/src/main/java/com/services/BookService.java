@@ -10,7 +10,7 @@ public interface BookService {
 	
 	 List<DTO>	retriveAllBook();
 	 
-     Book addBook(Book b) throws NoSuchFieldException;
+     String addBook(Book b) throws NoSuchFieldException;
      
     DTO getBookById(int id)throws NoSuchFieldException;
     

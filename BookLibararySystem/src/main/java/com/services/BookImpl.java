@@ -44,8 +44,10 @@ public class BookImpl implements BookService {
 	}
 
 	@Override
-	public Book addBook(Book b) throws NoSuchFieldException {
-		return bookRepo.save(b);
+	public String addBook(Book b) throws NoSuchFieldException {
+		 bookRepo.save(b);
+		 
+		 return "added";
 		 
 	}
 
