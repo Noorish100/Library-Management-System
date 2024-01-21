@@ -31,7 +31,7 @@ public class BookImpl implements BookService {
 		for(Book b:l) {
 			DTO d=new DTO();
 			
-			d.setId(b.getBookId());
+			d.setBookId(b.getBookId());
 			d.setIsbn(b.getIsbn());
 			d.setQuantity(b.getQuantity());
 			
@@ -40,8 +40,6 @@ public class BookImpl implements BookService {
 			d.setTitle(b.getTitle());
 			ans.add(d);
 		}
-	
-		
 	return ans;
 	}
 
@@ -58,7 +56,7 @@ public class BookImpl implements BookService {
 		if(b.isPresent()) {
 			Book ba=b.get();
 			
-			d.setId(ba.getBookId());
+			d.setBookId(ba.getBookId());
 			d.setIsbn(ba.getIsbn());
 			d.setQuantity(ba.getQuantity());
 		
@@ -107,7 +105,7 @@ public class BookImpl implements BookService {
 	@Override
 	public List<Book> bookByAuthor(Author author) throws NoSuchFieldException {
 		// TODO Auto-generated method stub
-		return null;
+		return bookRepo.findByAuthor(author);
 	}
 
 }

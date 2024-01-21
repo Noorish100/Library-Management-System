@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.Entity.Author;
 import com.Entity.Book;
 import com.Entity.DTO;
 import com.services.BookImpl;
@@ -54,9 +55,15 @@ public class BookController {
 	        return ResponseEntity.ok(ans);
 	    }
 	    
-	      @GetMapping("/book/T/{t}")
+	      @GetMapping("/books/title/{t}")
 		  public ResponseEntity<List<Book>> getBookBytitle(@PathVariable String t) throws NoSuchFieldException {
 		        List<Book> ans=bookImpl.bookByTitle(t);
+		        return ResponseEntity.ok(ans);
+		    }
+	      
+	      @GetMapping("/books/author")
+		  public ResponseEntity<List<Book>> getBookBytitle(@RequestBody Author t) throws NoSuchFieldException {
+		        List<Book> ans=bookImpl.bookByAuthor(t);
 		        return ResponseEntity.ok(ans);
 		    }
 	    

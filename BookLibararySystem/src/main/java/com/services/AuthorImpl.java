@@ -1,7 +1,8 @@
 package com.services;
 
-import java.sql.Date;
-import java.time.LocalDateTime;
+
+
+import java.util.Date;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +28,12 @@ public class AuthorImpl implements AuthorService {
 	}
 
 	@Override
-	public List<Author> AllbornAfter(Date t) {
+	public List<Author> AllbornAfter(Date d) {
 		// TODO Auto-generated method stub
-		return null;
+		return authorRepo.findByBirthDateGreaterThan(d);
 	}
+	
+	
 
 
 

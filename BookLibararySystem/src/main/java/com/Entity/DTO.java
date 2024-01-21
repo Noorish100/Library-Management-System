@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @Data
 public class DTO {
 	
-	private Integer id;
+	private Integer bookId;
 	private String title;
 	private Integer isbn;
 	private Integer quantity;
