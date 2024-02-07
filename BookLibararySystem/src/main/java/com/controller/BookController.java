@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -34,6 +35,8 @@ public class BookController {
 	        return ResponseEntity.ok(ans);
 	    }
 	  
+	    
+	    @PreAuthorize("hasRole('ADMIN')")
 	    @PostMapping("/books")
 	    public ResponseEntity<String> addBook(@RequestBody @Valid Book b,BindingResult result) throws NoSuchFieldException {
 	    	
@@ -45,30 +48,35 @@ public class BookController {
 	        return ResponseEntity.ok(ans);
 	    }
 	    
+	    @PreAuthorize("hasRole('ADMIN')")
 	    @DeleteMapping("/books/{id}")
 	    public ResponseEntity<String> delBookById(@PathVariable("id") Integer id) throws NoSuchFieldException {
 	        String ans=bookImpl.delBookById(id);
 	        return ResponseEntity.ok(ans);
 	    }
 	    
+	    @PreAuthorize("hasRole('ADMIN')")
 	    @GetMapping("/books/{id}")
 	    public ResponseEntity<DTO> getBookById(@PathVariable("id") Integer id) throws NoSuchFieldException {
 	        DTO ans=bookImpl.getBookById(id);
 	        return ResponseEntity.ok(ans);
 	    }
 	    
+	    @PreAuthorize("hasRole('ADMIN')")
 	    @PutMapping("/books/{id}")
 	    public ResponseEntity<Book> updateBookById(@PathVariable("id") Integer id) throws NoSuchFieldException {
 	        Book ans=bookImpl.updateBookById(id);
 	        return ResponseEntity.ok(ans);
 	    }
 	    
+	      
 	      @GetMapping("/books/title/{t}")
 		  public ResponseEntity<List<Book>> getBookBytitle(@PathVariable String t) throws NoSuchFieldException {
 		        List<Book> ans=bookImpl.bookByTitle(t);
 		        return ResponseEntity.ok(ans);
 		    }
 	      
+	      @PreAuthorize("hasRole('USER')")
 	      @GetMapping("/books/author")
 		  public ResponseEntity<List<Book>> getBookBytitle(@RequestBody Author t) throws NoSuchFieldException {
 		        List<Book> ans=bookImpl.bookByAuthor(t);
