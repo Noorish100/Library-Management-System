@@ -1,4 +1,7 @@
- <style>
+
+
+<body>
+    <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -24,8 +27,6 @@
             margin: 5px 0;
         }
     </style>
-
-<body>
     <h1>Library Management System</h1>
     <p>Welcome to the Library Management System (LMS) README file. This document provides an overview of the system endpoints and basic usage instructions.</p>
 
