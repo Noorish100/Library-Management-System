@@ -1,8 +1,39 @@
-
+ <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #666;
+        }
+        p {
+            color: #777;
+        }
+        .endpoint {
+            margin-bottom: 20px;
+        }
+        .endpoint h3 {
+            margin-top: 0;
+            color: #444;
+        }
+        .endpoint p {
+            margin: 5px 0;
+        }
+    </style>
 
 <body>
     <h1>Library Management System</h1>
     <p>Welcome to the Library Management System (LMS) README file. This document provides an overview of the system endpoints and basic usage instructions.</p>
+
+ <div class="swagger-link">
+        <h2>Swagger UI Documentation</h2>
+        <p>To explore the API endpoints interactively, you can use the Swagger UI documentation:</p>
+        <p><a href="http://localhost:8889/swagger-ui/index.html" target="_blank">Swagger UI</a></p>
+    </div>
 
    <h2>Endpoints</h2>
 
