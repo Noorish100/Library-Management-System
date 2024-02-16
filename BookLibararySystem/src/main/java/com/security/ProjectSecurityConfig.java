@@ -28,18 +28,19 @@ public class ProjectSecurityConfig {
 	@Bean
 	public InMemoryUserDetailsManager userDetails() {
 	
-		InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
-	  UserDetails admin = User.withUsername("admin").password(passwordEncoder().encode("12345")).roles("ADMIN").build();
+    	InMemoryUserDetailsManager userDetailsService = new InMemoryUserDetailsManager();
+	    UserDetails admin = User.withUsername("admin").password(passwordEncoder().encode("12345")).roles("ADMIN").build();
 	    UserDetails user = User.withUsername("user").password(passwordEncoder().encode("12345")).roles("USER").build();
 //	    userDetailsService.createUser(admin);
 //	    userDetailsService.createUser(user);
 	    return new InMemoryUserDetailsManager(admin,user);
 	}
-
-	 @Bean
+	
+     @Bean
 	 public PasswordEncoder passwordEncoder() {
 	        return new BCryptPasswordEncoder();
 	 }
+	}
 
-	
-}
+
+
