@@ -7,7 +7,7 @@
  <div class="swagger-link">
         <h2>Swagger UI Documentation</h2>
         <p>To explore the API endpoints interactively, you can use the Swagger UI documentation:</p>
-        <p><a href="http://13.53.189.98:8889/swagger-ui/index.html" target="_blank">Swagger UI</a></p>
+        <p><a href="https://13.53.189.98:8889/swagger-ui/index.html" target="_blank">Swagger UI</a></p>
     </div>
 
    <h2>Endpoints</h2>
@@ -71,7 +71,7 @@
   <p>Using cURL to retrieve book data:</p>
   <pre>
     <code>
-curl -X GET -u admin:12345 library-management-system-production-d295.up.railway.app/api/books
+curl -X GET -u admin:12345 13.53.189.98:8889/swagger-ui/index.html/api/books
         </code>
     </pre>
 
