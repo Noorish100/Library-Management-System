@@ -14,49 +14,49 @@
 
    <div class="endpoint">
         <h3>Save Book Data</h3>
-        <p>URI: <code>library-management-system-production-d295.up.railway.app/api/books</code></p>
+        <p>URI: <code>api/books</code></p>
         <p>Method: <code>POST</code></p>
     </div>
 
    <div class="endpoint">
         <h3>Retrieve Book Data (DTO)</h3>
-        <p>URI: <code>library-management-system-production-d295.up.railway.app/api/books</code></p>
+        <p>URI: <code>api/books</code></p>
         <p>Method: <code>GET</code></p>
     </div>
 
    <div class="endpoint">
         <h3>Update Book Data by ID</h3>
-        <p>URI: <code>library-management-system-production-d295.up.railway.app/api/books/id</code></p>
+        <p>URI: <code>api/books/id</code></p>
         <p>Method: <code>PUT</code></p>
     </div>
 
    <div class="endpoint">
         <h3>Delete Book Data by ID</h3>
-        <p>URI: <code>library-management-system-production-d295.up.railway.app/api/books/id</code></p>
+        <p>URI: <code>api/books/id</code></p>
         <p>Method: <code>DELETE</code></p>
     </div>
 
    <div class="endpoint">
         <h3>Get Book by Title</h3>
-        <p>URI: <code>library-management-system-production-d295.up.railway.app/api/books/title/t</code></p>
+        <p>URI: <code>api/books/title/t</code></p>
         <p>Method: <code>GET</code></p>
     </div>
 
    <div class="endpoint">
         <h3>Get Book by Author</h3>
-        <p>URI: <code>library-management-system-production-d295.up.railway.app/api/books/author</code></p>
+        <p>URI: <code>api/books/author</code></p>
         <p>Method: <code>GET</code></p>
     </div>
 
   <div class="endpoint">
         <h3>Get All Authors</h3>
-        <p>URI: <code>library-management-system-production-d295.up.railway.app/api/authors</code></p>
+        <p>URI: <code>api/authors</code></p>
         <p>Method: <code>GET</code></p>
    </div>
 
    <div class="endpoint">
        <h3>Get Authors After Specific Date</h3>
-       <p>URI: <code>library-management-system-production-d295.up.railway.app/api/authors/date</code></p>
+       <p>URI: <code>api/authors/date</code></p>
     <p>Method: <code>GET</code></p>
   </div>
    <h2>Authentication</h2>
