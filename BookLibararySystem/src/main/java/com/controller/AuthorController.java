@@ -37,8 +37,6 @@ public class AuthorController {
 		
 		Date d=dateFormat.parse(date);
 		
-		
-		
         List<Author> ans=authorImpl.AllbornAfter(d);
         return ResponseEntity.ok(ans);
     }
