@@ -1,5 +1,6 @@
 package com.services;
 
+import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.List;
 
 import com.Entity.Author;
@@ -20,7 +21,7 @@ public interface BookService {
     
     List<Book> bookByTitle(String title)throws NoSuchFieldException;
     
-    List<Book> bookByAuthor(Author author)throws NoSuchFieldException;
+    List<Book> bookByAuthor(Integer author)throws NoSuchFieldException, UserPrincipalNotFoundException;
     
     
     

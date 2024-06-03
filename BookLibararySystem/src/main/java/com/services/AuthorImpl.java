@@ -29,7 +29,6 @@ public class AuthorImpl implements AuthorService {
 
 	@Override
 	public List<Author> AllbornAfter(Date d) {
-		// TODO Auto-generated method stub
 		return authorRepo.findByBirthDateGreaterThan(d);
 	}
 	

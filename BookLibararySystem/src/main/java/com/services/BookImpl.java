@@ -1,6 +1,7 @@
 package com.services;
 
 
+import java.nio.file.attribute.UserPrincipalNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
@@ -11,6 +12,7 @@ import org.springframework.stereotype.Service;
 import com.Entity.Author;
 import com.Entity.Book;
 import com.Entity.DTO;
+import com.repository.AuthorRepo;
 import com.repository.BookRepo;
 
 @Service
@@ -18,6 +20,9 @@ public class BookImpl implements BookService {
 
 	@Autowired
 	private BookRepo bookRepo;
+	
+	@Autowired
+	private AuthorRepo authorRepo;
 	
 	
 	@Override
@@ -105,9 +110,17 @@ public class BookImpl implements BookService {
 	}
 
 	@Override
-	public List<Book> bookByAuthor(Author author) throws NoSuchFieldException {
+	public List<Book> bookByAuthor(Integer id) throws NoSuchFieldException, UserPrincipalNotFoundException {
 		// TODO Auto-generated method stub
-		return bookRepo.findByAuthor(author);
+		Optional<Author> auth= authorRepo.findById(id);
+		
+		if(auth.isEmpty()) {
+			throw new UserPrincipalNotFoundException("not found");
+		}
+		
+		List<Book> ans=bookRepo.findByAuthor(auth.get());
+		
+		return ans;
 	}
 
 }
