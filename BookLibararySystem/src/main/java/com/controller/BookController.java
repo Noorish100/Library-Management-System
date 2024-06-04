@@ -7,6 +7,7 @@ import java.util.Map;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -32,12 +33,13 @@ public class BookController {
 	@Autowired
 	private BookImpl bookImpl;
 
+
 	@GetMapping("/books")
 	public ResponseEntity<List<DTO>> getAllBook() {
 
 		List<DTO> ans = bookImpl.retriveAllBook();
 
-//	        Map<String,?> res=new HashMap<>();
+
 
 		return ResponseEntity.ok(ans);
 
@@ -84,5 +86,6 @@ public class BookController {
 		List<Book> ans = bookImpl.bookByAuthor(t);
 		return ResponseEntity.ok(ans);
 	}
+
 
 }
