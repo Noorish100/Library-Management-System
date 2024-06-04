@@ -8,14 +8,9 @@
         <h2>Swagger UI Documentation</h2>
         <p>To explore the API endpoints interactively, you can use the Swagger UI documentation:</p>
         <p><a href="http://13.53.189.98:8889/swagger-ui/index.html" target="_blank">Swagger UI</a></p>
-      <p><a href=" http://localhost:8889/swagger-ui/index.html" target="_blank">Local Swagger UI</a></p>
     </div>
-     <div class="swagger-link">
-        <h2>Swagger UI Documentation</h2>
-        <p>To explore the API endpoints interactively, you can use the Swagger UI documentation:</p>  
-      <p><a href=" http://localhost:8889/swagger-ui/index.html/#" target="_blank">Local Swagger UI</a></p>
-    </div>
-
+      <p><a href="http://localhost:8889/swagger-ui/index.html/#" target="_blank">Local Swagger UI</a></p>
+    
    <h2>Endpoints</h2>
 
    <div class="endpoint">
