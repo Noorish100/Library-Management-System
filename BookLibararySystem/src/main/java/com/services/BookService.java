@@ -21,6 +21,8 @@ public interface BookService {
     
     List<Book> bookByTitle(String title)throws NoSuchFieldException;
     
+    List<Book> bookByTitleAndAuthor(String title,String authorName)throws NoSuchFieldException;
+    
     List<Book> bookByAuthor(Integer author)throws NoSuchFieldException, UserPrincipalNotFoundException;
     
     

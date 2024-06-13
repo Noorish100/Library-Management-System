@@ -33,13 +33,19 @@ public class BookController {
 	@Autowired
 	private BookImpl bookImpl;
 
-
 	@GetMapping("/books")
 	public ResponseEntity<List<DTO>> getAllBook() {
 
 		List<DTO> ans = bookImpl.retriveAllBook();
 
+		return ResponseEntity.ok(ans);
 
+	}
+	
+	@GetMapping("/ta/{title}/{authorName}")
+	public ResponseEntity<List<Book>> getByTitleAndAuthor(@PathVariable String title,@PathVariable String authorName) throws NoSuchFieldException {
+
+		List<Book> ans = bookImpl.bookByTitleAndAuthor(title, authorName);
 
 		return ResponseEntity.ok(ans);
 
@@ -82,10 +88,10 @@ public class BookController {
 	}
 
 	@GetMapping("/books/author/{t}")
-	public ResponseEntity<List<Book>> getBookByAuthor(@PathVariable Integer t) throws NoSuchFieldException, UserPrincipalNotFoundException {
+	public ResponseEntity<List<Book>> getBookByAuthor(@PathVariable Integer t)
+			throws NoSuchFieldException, UserPrincipalNotFoundException {
 		List<Book> ans = bookImpl.bookByAuthor(t);
 		return ResponseEntity.ok(ans);
 	}
-
 
 }
